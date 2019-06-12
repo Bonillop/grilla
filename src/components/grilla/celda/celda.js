@@ -3,8 +3,8 @@ import classes from "./celda.module.css";
 
 const Celda = (props) => (
 
-    <div className={classes.celda}> 
-        
+    <div className={classes.celda} onClick={() => props.handleClick(props.value)}> 
+        {props.value}
     </div>
 )
 

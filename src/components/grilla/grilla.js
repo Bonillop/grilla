@@ -3,7 +3,6 @@ import classes from "./grilla.module.css";
 import Celda from "./celda/celda";
 
 const Grilla = props => {
-    
   let filas = [];
   for (let i = 0; i < props.numFilas; ++i) {
     filas.push(i);
@@ -15,12 +14,20 @@ const Grilla = props => {
 
   return (
     <div className={classes.grilla}>
-      {filas.map(() => {
-          return <div className={classes.fila}>
-              {columnas.map(() => {
-                  return <Celda/>
-              })}
+      {filas.map(indexFilas => {
+        return (
+          <div key={indexFilas} className={classes.fila}>
+            {columnas.map(index => {
+              return (
+                <Celda
+                  key={index}
+                  value={props.getValue(indexFilas, index)}
+                  handleClick={(value) => props.handleClick(value)}
+                />
+              );
+            })}
           </div>
+        );
       })}
     </div>
   );
