@@ -1,4 +1,8 @@
 .layout {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  background-color: #c6c8f6;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 4px 16px -1px rgba(255, 255, 255, 0.51);
 }

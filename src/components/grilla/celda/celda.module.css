@@ -1,10 +1,13 @@
 .celda {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid black;
-  width: 60px;
-  height: 60px;
+  width: 4em;
+  height: 4em;
 }
 
 .celda:hover{
     background-color: gray;
+    color:white;
 }

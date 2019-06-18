@@ -21,8 +21,9 @@ const Grilla = props => {
               return (
                 <Celda
                   key={index}
-                  value={props.getValue(indexFilas, index)}
-                  handleClick={(value) => props.handleClick(value)}
+                  handleClick={props.handleClick}
+                  arrayIndex={props.getArrayIndex(indexFilas, index)}
+                  getValue={props.handleGetValue}
                 />
               );
             })}
