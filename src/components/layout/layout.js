@@ -8,9 +8,15 @@ class Layout extends Component {
 
     this.state = {
       numGrillas: 1,
-      numFilas: 4,
-      numColumnas: 4,
-      estadosPosibles: [" ", "X", "O"],
+      numFilas: 8,
+      numColumnas: 8,
+      /**
+       * Para utilizar una imagen pasar directamente el tag img con la classname imagen y el 
+       * src dentro de la carpeta assets y la imagen. Ejemplo:
+       */
+      estadosPosibles: [" ", "X", "O",
+                        <img className={classes.imagen} alt='patita' src='/assets/patita.svg'/>, 
+                        <img className={classes.imagen} alt='patita' src='/assets/hot-dog.svg'/>],
       estadosCeldas: []
     };
   }

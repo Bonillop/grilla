@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35em;
-  padding-top: 3em;
+  min-height: 100%;
+  margin: 4rem auto;
 }
 
 .App-logo {

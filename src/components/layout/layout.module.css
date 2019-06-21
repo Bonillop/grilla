@@ -6,3 +6,8 @@
   border: 1px solid lightgray;
   box-shadow: 2px 4px 16px -1px rgba(255, 255, 255, 0.51);
 }
+
+.imagen {
+  max-width: 90%;
+  max-height: 90%;
+}
