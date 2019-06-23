@@ -3,27 +3,20 @@ import classes from "./grilla.module.css";
 import Celda from "./celda/celda";
 
 const Grilla = props => {
-  let filas = [];
-  for (let i = 0; i < props.numFilas; ++i) {
-    filas.push(i);
-  }
-  let columnas = [];
-  for (let i = 0; i < props.numColumnas; ++i) {
-    columnas.push(i);
-  }
+  let filas = [...Array(props.numFilas)];
+  let columnas = [...Array(props.numColumnas)];
 
   return (
     <div className={classes.grilla}>
-      {filas.map(indexFilas => {
+      {filas.map((value, indexFilas) => {
         return (
           <div key={indexFilas} className={classes.fila}>
-            {columnas.map(index => {
+            {columnas.map((value, index) => {
               return (
                 <Celda
-                  key={index}
-                  handleClick={props.handleClick}
-                  arrayIndex={props.getArrayIndex(indexFilas, index)}
-                  getValue={props.handleGetValue}
+                  key={props.getArrayIndex(indexFilas, index)}
+                  handleClick={() => props.handleClick(indexFilas, index)}
+                  value={props.handleGetValue(indexFilas, index)}
                 />
               );
             })}
